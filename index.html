@@ -25,7 +25,7 @@
         }
 
         .section-title {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             font-weight: 800;
             color: var(--primary-dark);
             margin-bottom: 1.5rem;
@@ -360,11 +360,7 @@
                 sectionEl.appendChild(h2);
 
                 const grid = document.createElement('div');
-                grid.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12';
-                
-                if (section.items.length === 3) {
-                    grid.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 max-w-4xl';
-                }
+                grid.className = 'grid grid-cols-[repeat(auto-fill,minmax(130px,1fr))] gap-5 mb-12';
 
                 sectionEl.appendChild(grid);
                 container.appendChild(sectionEl);
