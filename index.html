@@ -351,11 +351,14 @@
         function init() {
             const container = document.getElementById('gallery-container');
 
-            galleryData.forEach(section => {
+            galleryData.forEach((section, index) => {
                 const sectionEl = document.createElement('div');
-                
+
                 const h2 = document.createElement('h2');
                 h2.className = 'section-title';
+                if (index === 0) {
+                    h2.style.marginTop = '0';
+                }
                 h2.innerText = section.title;
                 sectionEl.appendChild(h2);
 
